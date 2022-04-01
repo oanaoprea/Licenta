@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Licenta.Views.ListPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+          
+            <Editor Placeholder="Enter the recipie name"
+                   Text="{Binding Name}"/>
+
+            <Editor Placeholder="Enter the recipie ingredients"
+                   Text="{Binding Ingredients}"/>
+
+            <Editor Placeholder="Enter the recipie calories"
+                   Text="{Binding Calories}"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Save"
+                        Clicked="OnSaveButtonClicked"/>
+                <Button Grid.Column="1"
+                        Text="Delete"
+                        Clicked="OnDeleteButtonClicked"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

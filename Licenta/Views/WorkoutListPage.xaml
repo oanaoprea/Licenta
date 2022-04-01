@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Licenta.Views.WorkoutListPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            
+            <Editor Placeholder="Enter the workout name"
+                   Text="{Binding Name}"/>
+
+            <Editor Placeholder="Enter the workout description"
+                   Text="{Binding Description}"/>
+
+            <Editor Placeholder="Enter the workout duration"
+                   Text="{Binding Duration}"/>
+
+            <Editor Placeholder="Enter the workout calories burnt"
+                   Text="{Binding CaloriesBurnt}"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Save"
+                        Clicked="OnSaveButtonClicked"/>
+                <Button Grid.Column="1"
+                        Text="Delete"
+                        Clicked="OnDeleteButtonClicked"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
